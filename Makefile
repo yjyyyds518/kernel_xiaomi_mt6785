@@ -747,7 +747,6 @@ KBUILD_CFLAGS	+= -mllvm -polly \
 ifdef CONFIG_LD_DEAD_CODE_DATA_ELIMINATION
 KBUILD_CFLAGS	+= -mllvm -polly-run-dce
 endif
-endif
 
 endif # CONFIG_LLVM_POLLY
 endif # $(cc-name),clang
