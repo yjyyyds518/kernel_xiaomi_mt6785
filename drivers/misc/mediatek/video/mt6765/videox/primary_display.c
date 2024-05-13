@@ -6204,10 +6204,12 @@ static bool disp_rsz_frame_has_rsz_layer(struct disp_frame_cfg_t *cfg)
 	if ((path != 2 && path != 3 && path != 4) && (rsz == true)) {
 		struct disp_input_config *c = &cfg->input_cfg[i];
 
+/*
 		DISPDBG("not RPO but L%d(%u,%u,%ux%u)->(%u,%u,%ux%u)\n",
 			i, c->src_offset_x, c->src_offset_y, c->src_width,
 			c->src_height, c->tgt_offset_x, c->tgt_offset_y,
 			c->tgt_width, c->tgt_height);
+*/
 	}
 
 	return rsz;
@@ -6264,6 +6266,7 @@ static void rsz_in_out_roi(struct disp_frame_cfg_t *cfg,
 	data_config->rsz_src_roi = src_total_roi;
 	data_config->rsz_dst_roi = dst_total_roi;
 
+/*
 	DISPINFO("RPO] rsz_src(x,y,w,h)=(%d,%d,%d,%d)\n",
 		data_config->rsz_src_roi.x,
 		data_config->rsz_src_roi.y,
@@ -6274,6 +6277,7 @@ static void rsz_in_out_roi(struct disp_frame_cfg_t *cfg,
 		data_config->rsz_dst_roi.y,
 		data_config->rsz_dst_roi.width,
 		data_config->rsz_dst_roi.height);
+*/
 }
 
 static void _ovl_sbch_invalid_config(struct cmdqRecStruct *cmdq_handle)
